@@ -1,0 +1,129 @@
+/* Styles for mobile screen sizes */
+@media screen and (max-width: 480px) {
+    /* Containers */
+    .container {
+        max-width: 440px;
+        padding: 0 10px;
+    }
+
+    section {
+        padding-top: 90px;
+        padding-bottom: 90px;
+    }
+
+    /* Header section styles */
+    header {
+        height: 100vh;
+        background-image: url('images/mobile/image-hero.jpg');
+        padding: 50px 0;
+    }
+
+    .menu-list {
+        flex-direction: column;
+    }
+
+    .burger-btn {
+        display: block;
+    }
+
+    .navbar-collapse {
+        overflow: hidden;
+        position: absolute;
+        top: 0;
+        bottom: 0;
+        left: 0;
+        width: 0;
+        background-color: #000;
+        transition: width .5s ease;
+    }
+
+    .navbar-collapse.open {
+        width: 100%;
+        padding-left: 8%;
+        padding-right: 8%;
+    }
+
+    .navbar-collapse .menu-list {
+        margin-top: 60%;
+    }
+
+    .navbar-collapse .menu-item {
+        margin-left: 0;
+        font-family: 'Josefin Sans', sans-serif;
+        font-size: 1.5rem;
+        margin-top: 20px;
+    }
+
+    .navbar-collapse .menu-link {
+        text-transform: uppercase;
+        color: hsl(0, 0%, 55%);
+    }
+
+    .title-block {
+        width: 100%;
+        margin-top: 50%;
+    }
+
+    .big-heading {
+        font-size: 3rem;
+        padding: 30px;
+    }
+
+    
+    /* About section styles */
+    .about-img {
+        width: 100%;
+        margin-bottom: 50px;
+    }
+
+    .text-block {
+        width: 100%;
+        position: static;
+        padding: 0;
+        text-align: center;
+    }
+
+    .section-title {
+        font-size: 2rem;
+    }
+
+    .text {
+        font-size: 17px;
+        font-weight: 500;
+        padding: 0 15px;
+    }
+
+    /* Creations */
+    #creations .wrapper{
+        justify-content: center;
+    }
+
+    .creations-list {
+        grid-template-columns: 1fr;
+    }
+
+    .btn-mobile {
+        display: block;
+    }
+
+    .btn-desktop {
+        display: none;
+    }
+
+
+    /* Footer */
+    .footer-grid {
+        grid-template-columns: 1fr;
+        justify-items: center;
+    }
+
+    .social-icons {
+        grid-row-start: 3;
+        grid-row-end: 4;
+    }
+
+    .footer-grid .menu-list .menu-item {
+        text-align: center;
+        margin: 15px 0;
+    }
+}
