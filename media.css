@@ -2,13 +2,16 @@
 @media screen and (max-width: 480px) {
     /* Containers */
     .container {
-        max-width: 440px;
-        padding: 0 10px;
+        max-width: 90%;
+        padding: 0 5px;
     }
 
-    section {
-        padding-top: 90px;
-        padding-bottom: 90px;
+    #about {
+        padding: 100px 0 70px;
+    }
+
+    #creations {
+        padding: 70px 0;
     }
 
     /* Header section styles */
@@ -65,7 +68,7 @@
     }
 
     .big-heading {
-        font-size: 3rem;
+        font-size: 2.5rem;
         padding: 30px;
     }
 

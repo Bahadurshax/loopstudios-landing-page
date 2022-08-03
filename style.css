@@ -25,17 +25,13 @@ li, p {
 header {
     background-image: url('images/desktop/image-hero.jpg');
     background-size: cover;
-    padding: 80px 0;
+    padding: 70px 0 140px;
 }
 
 /* CONTAINERS */
 .container {
     max-width: 1114px;
     margin: auto;
-}
-
-section {
-    padding: 160px 0;
 }
 
 footer {
@@ -111,6 +107,9 @@ footer {
 
 /* About section styles */
 /* TODO */
+#about {
+    padding: 160px 0 90px;
+}
 
 .wrapper {
     position: relative;
@@ -141,6 +140,10 @@ footer {
 
 
 /* Creations section styles */
+#creations {
+    padding: 90px 0 180px;
+}
+
 .creations-list {
     display: grid;
     grid-template-columns: repeat(auto-fill, minmax(240px, 256px));
