@@ -28,8 +28,8 @@ Users should be able to:
 
 ### Links
 
-- Solution URL: [Add solution URL here](https://your-solution-url.com)
-- Live Site URL: [Add live site URL here](https://your-live-site-url.com)
+- Solution URL: [My solution](https://www.frontendmentor.io/solutions/loopstudios-landing-page-Gdgdm-mYYy)
+- Live Site URL: [loopstudios landing page](https://br-loopstudios.netlify.app/)
 
 ## My process
 
@@ -39,11 +39,9 @@ Users should be able to:
 - CSS3
 - Flexbox
 - CSS Grid
-- Mobile-first workflow
 
 
 ## Author
 
-- Github - [Bahadur](https://github.com/Bahadurshax)
 - Frontend Mentor - [@Bahadurshax](https://www.frontendmentor.io/profile/Bahadurshax)
 - Codewars - [Bahadur](https://www.codewars.com/users/Bahadur%20Arzimbetov)
