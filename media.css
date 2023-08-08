@@ -1,20 +1,41 @@
-/* Styles for mobile screen sizes */
-@media screen and (max-width: 480px) {
-    /* Containers */
+@media (min-width: 40em) {
+    .creations-list {
+        grid-template-rows: repeat(2, 450px);
+        grid-template-columns: repeat(auto-fill, minmax(256px, 1fr));
+    }
+
+    .footer-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+
+@media (max-width: 70em) {
     .container {
-        max-width: 90%;
-        padding: 0 5px;
+        padding: 0 5%;
     }
 
-    #about {
-        padding: 100px 0 70px;
+    .wrapper {
+        text-align: center;
     }
 
-    #creations {
-        padding: 70px 0;
+    .text-block {
+        width: 100%;
+        position: static;
+        padding: 0;
+        text-align: center;
+        margin: 0 auto;
     }
 
-    /* Header section styles */
+}
+
+/* STYLES FOR MOBILE SCREEN SIZES */
+@media (max-width: 40em) {
+    #creations .wrapper {
+        justify-content: center;
+    }
+
+    /* HEADER SECTION STYLES */
     header {
         height: 100vh;
         background-image: url('images/mobile/image-hero.jpg');
@@ -25,7 +46,7 @@
         flex-direction: column;
     }
 
-    .burger-btn {
+    .menu-btn {
         display: block;
     }
 
@@ -40,69 +61,23 @@
         transition: width .5s ease;
     }
 
-    .navbar-collapse.open {
+    .navbar-collapse[aria-expanded="true"] {
         width: 100%;
-        padding-left: 8%;
-        padding-right: 8%;
+        padding: 5%;
     }
 
     .navbar-collapse .menu-list {
-        margin-top: 60%;
+        margin-top: 45%;
     }
 
     .navbar-collapse .menu-item {
-        margin-left: 0;
         font-family: 'Josefin Sans', sans-serif;
         font-size: 1.5rem;
-        margin-top: 20px;
     }
 
     .navbar-collapse .menu-link {
         text-transform: uppercase;
         color: hsl(0, 0%, 55%);
-    }
-
-    .title-block {
-        width: 100%;
-        margin-top: 50%;
-    }
-
-    .big-heading {
-        font-size: 2.5rem;
-        padding: 30px;
-    }
-
-    
-    /* About section styles */
-    .about-img {
-        width: 100%;
-        margin-bottom: 50px;
-    }
-
-    .text-block {
-        width: 100%;
-        position: static;
-        padding: 0;
-        text-align: center;
-    }
-
-    .section-title {
-        font-size: 2rem;
-    }
-
-    .text {
-        font-size: 17px;
-        font-weight: 500;
-        padding: 0 15px;
-    }
-
-    /* Creations */
-    #creations .wrapper{
-        justify-content: center;
-    }
-
-    .creations-list {
-        grid-template-columns: 1fr;
     }
 
     .btn-mobile {
@@ -114,9 +89,8 @@
     }
 
 
-    /* Footer */
+    /* FOOTER */
     .footer-grid {
-        grid-template-columns: 1fr;
         justify-items: center;
     }
 
@@ -127,6 +101,5 @@
 
     .footer-grid .menu-list .menu-item {
         text-align: center;
-        margin: 15px 0;
     }
 }

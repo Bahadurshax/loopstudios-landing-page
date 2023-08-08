@@ -2,20 +2,15 @@
 <html lang="en"> 
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- displays site properly based on user's device -->
+    
     <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+    
     <title>Frontend Mentor | Loopstudios landing page</title>
-    <link rel="stylesheet" type="text/css" href="style.css">
+    
+    <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="media.css">
-    <!-- Google Fonts -->
-    <!-- Alata -->
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Alata&display=swap" rel="stylesheet">
-    <!-- Josefin Sans -->
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@300&display=swap" rel="stylesheet">
   </head>
 <body>
 
@@ -29,12 +24,7 @@
               </a>
               <!-- /.logo -->
 
-              <a href="#mobile_menu" class="burger-btn">
-                <img src="images/icon-hamburger.svg" alt="burger-btn">
-              </a>
-              <!-- /.burger-btn -->
-
-              <div class="navbar-collapse" id="mobile_menu">
+              <div class="navbar-collapse" id="mobile_menu" aria-expanded="false">
                   <ul class="menu-list d-flex">
                     <li class="menu-item"><a href="#about" class="menu-link">About</a></li>
                     <li class="menu-item"><a href="#" class="menu-link">Careers</a></li>
@@ -45,12 +35,18 @@
                   <!-- /.menu-list -->
               </div>
               <!-- /.navbar-collapse -->
+
+              <button 
+            aria-controls="mobile_menu" 
+            aria-label="Toggle the menu" 
+            class="btn menu-btn">
+            </button>
+            <!-- /.menu-btn -->
+
             </nav>
             <!-- /nav -->
-            <div class="title-block">
-                <h1 class="big-heading">Immersive <br> experiences <br> that deliver</h1>
-            </div>
-            <!-- /.title-block -->
+            
+            <h1 class="big-heading">Immersive experiences that deliver</h1>
         </div>
         <!-- /container -->
     </header>
@@ -86,15 +82,14 @@
 
           <div class="wrapper d-flex space-between align-items-center">
             <h2 class="section-title">Our creations</h2>
-            <button class="btn btn-desktop">see all</button>
+            <button class="btn btn-black btn-desktop">see all</button>
           </div>
-          <!-- /.wrapper -->
             
           <div class="creations-list">
               <div class="creation-item">
                 <picture>
                   <source media="(min-width: 1440px)" srcset="images/desktop/image-deep-earth.jpg">
-                  <source media="(max-width: 480px)" srcset="images/mobile/image-deep-earth.jpg">
+                  <source media="(max-width: 40em)" srcset="images/mobile/image-deep-earth.jpg">
                   <img src="images/desktop/image-deep-earth.jpg" alt="creation-img">
                 </picture>
                   <h3 class="creation-title">Deep <br> Earth</h3>
@@ -103,7 +98,7 @@
               <div class="creation-item">
                 <picture>
                   <source media="(min-width: 1440px)" srcset="images/desktop/image-night-arcade.jpg">
-                  <source media="(max-width: 480px)" srcset="images/mobile/image-night-arcade.jpg">
+                  <source media="(max-width: 40em)" srcset="images/mobile/image-night-arcade.jpg">
                   <img src="images/desktop/image-night-arcade.jpg" alt="creation-img">
                 </picture>
                 <h3 class="creation-title">Night <br> Arcade</h3>
@@ -112,7 +107,7 @@
               <div class="creation-item">
                 <picture>
                   <source media="(min-width: 1440px)" srcset="images/desktop/image-soccer-team.jpg">
-                  <source media="(max-width: 480px)" srcset="images/mobile/image-soccer-team.jpg">
+                  <source media="(max-width: 40em)" srcset="images/mobile/image-soccer-team.jpg">
                   <img src="images/desktop/image-soccer-team.jpg" alt="creation-img">
                 </picture>
                 <h3 class="creation-title">Soccer <br> team VR</h3>
@@ -121,7 +116,7 @@
               <div class="creation-item">
                 <picture>
                   <source media="(min-width: 1440px)" srcset="images/desktop/image-grid.jpg">
-                  <source media="(max-width: 480px)" srcset="images/mobile/image-grid.jpg">
+                  <source media="(max-width: 40em)" srcset="images/mobile/image-grid.jpg">
                   <img src="images/desktop/image-grid.jpg" alt="creation-img">
                 </picture>
                 <h3 class="creation-title">The <br> grid</h3>
@@ -130,7 +125,7 @@
               <div class="creation-item">
                 <picture>
                   <source media="(min-width: 1440px)" srcset="images/desktop/image-from-above.jpg">
-                  <source media="(max-width: 480px)" srcset="images/mobile/image-from-above.jpg">
+                  <source media="(max-width: 40em)" srcset="images/mobile/image-from-above.jpg">
                   <img src="images/desktop/image-from-above.jpg" alt="creation-img">
                 </picture>
                 <h3 class="creation-title">From up <br> above VR</h3>
@@ -139,7 +134,7 @@
               <div class="creation-item">
                 <picture>
                   <source media="(min-width: 1440px)" srcset="images/desktop/image-pocket-borealis.jpg">
-                  <source media="(max-width: 480px)" srcset="images/mobile/image-pocket-borealis.jpg">
+                  <source media="(max-width: 40em)" srcset="images/mobile/image-pocket-borealis.jpg">
                   <img src="images/desktop/image-pocket-borealis.jpg" alt="creation-img">
                 </picture>
                 <h3 class="creation-title">Pocket <br> borealis</h3>
@@ -148,7 +143,7 @@
               <div class="creation-item">
                 <picture>
                   <source media="(min-width: 1440px)" srcset="images/desktop/image-curiosity.jpg">
-                  <source media="(max-width: 480px)" srcset="images/mobile/image-curiosity.jpg">
+                  <source media="(max-width: 40em)" srcset="images/mobile/image-curiosity.jpg">
                   <img src="images/desktop/image-curiosity.jpg" alt="creation-img">
                 </picture>
                 <h3 class="creation-title">The <br> curiosity</h3>
@@ -157,14 +152,14 @@
               <div class="creation-item">
                 <picture>
                   <source media="(min-width: 1440px)" srcset="images/desktop/image-fisheye.jpg">
-                  <source media="(max-width: 480px)" srcset="images/mobile/image-fisheye.jpg">
+                  <source media="(max-width: 40em)" srcset="images/mobile/image-fisheye.jpg">
                   <img src="images/desktop/image-fisheye.jpg" alt="creation-img">
                 </picture>
                 <h3 class="creation-title">Make it <br> fisheye</h3>
               </div>
           </div>
             <!-- /.creations-list -->
-            <button class="btn btn-mobile">see all</button>
+            <button class="btn btn-black btn-mobile">see all</button>
         </div>
         <!-- /.container -->
     </section>
@@ -181,10 +176,10 @@
               <!-- /.logo -->
     
               <div class="social-icons">
-                  <a href="#"><img src="images/icon-facebook.svg" alt="social-icon" class="social-icon"></a>
-                  <a href="#"><img src="images/icon-twitter.svg" alt="social-icon" class="social-icon"></a>
-                  <a href="#"><img src="images/icon-pinterest.svg" alt="social-icon" class="social-icon"></a>
-                  <a href="#"><img src="images/icon-instagram.svg" alt="social-icon" class="social-icon"></a>
+                  <a href="#"><img src="images/icon-facebook.svg" alt="facebook social icon" class="social-icon"></a>
+                  <a href="#"><img src="images/icon-twitter.svg" alt="twitter social icon" class="social-icon"></a>
+                  <a href="#"><img src="images/icon-pinterest.svg" alt="pinterest social icon" class="social-icon"></a>
+                  <a href="#"><img src="images/icon-instagram.svg" alt="instagram social icon" class="social-icon"></a>
               </div>
               <!-- /.social-icons -->
     

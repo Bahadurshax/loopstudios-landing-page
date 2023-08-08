@@ -1,3 +1,6 @@
+@import url('https://fonts.googleapis.com/css2?family=Alata&family=Josefin+Sans:wght@300&display=swap');
+
+/* GLOBAL STYLES */
 * {
     margin: 0;
     padding: 0;
@@ -25,15 +28,20 @@ header {
 
 /* CONTAINERS */
 .container {
+    width: 100%;
     max-width: 1114px;
-    margin: auto;
+    margin-inline: auto;
+}
+
+.wrapper {
+    position: relative;
 }
 
 footer {
     padding: 45px 0;
 }
 
-/* utility classes */
+/* UTILITY CLASSES */
 .d-flex {
     display: flex;
 }
@@ -46,24 +54,42 @@ footer {
     justify-content: space-between;
 }
 
-
-/* NAVBAR STYLES */
-.logo, .burger-btn {
-    position: relative;
-    z-index: 2;
+.btn {
+    border: 0;
+    background-color: transparent;
+    cursor: pointer;
 }
 
-.burger-btn {
-    cursor: pointer;
+
+/* NAVBAR STYLES */
+.menu {
+    margin-bottom: 7rem;
+}
+
+.logo {
+    position: relative;
+    z-index: 100;
+}
+
+.menu-btn {
     display: none;
+    position: absolute;
+    width: 30px;
+    height: 20px;
+    background-image: url('images/icon-hamburger.svg');
+    background-repeat: no-repeat;
+    background-size: contain;
+    z-index: 100;
+    right: 5%;
+}
+
+.navbar-collapse[aria-expanded="true"] ~ .menu-btn {
+    background-image: url('images/icon-close.svg');
 }
 
 .menu-list {
     list-style: none;
-}
-
-.menu-item  + .menu-item{
-    margin-left: 30px;
+    gap: 30px;
 }
 
 .menu-link {
@@ -71,83 +97,74 @@ footer {
     color: #fff;
     background-image: linear-gradient(#fff, #fff);
     background-repeat: no-repeat;
-    background-position: 0% 100%;
+    background-position: 50% 100%;
     background-size: 0% 2px;
+    padding-bottom: 10px;
     transition: all .3s ease;
 }
 
 .menu-link:hover {
-    background-size: 100% 2px;
+    background-size: 50% 2px;
 }
 
-
-.title-block {
-    width: 60%;
-    border: 2px solid #fff;
-    margin-top: 10%;
-    overflow: hidden;
-}
 
 /* HEADINGS */
 .big-heading {
+    width: 100%;
+    max-width: 650px;
+    border: 2px solid #fff;
     color: #fff;
-    font-size: 4rem;
-    padding: 40px;
+    font-size: clamp(2.5rem, 2.1127vw + 1.9718rem, 4rem);
+    text-wrap: balance;
+    padding: 2rem;
 }
 
 .section-title {
-    font-size: 3rem;
+    font-size: clamp(1.5rem, 0.9718rem + 2.1127vw, 3rem);
+    margin-block: 30px;
 }
 
 
-/* About section styles */
-/* TODO */
+/* ABOUT SECTION STYLES */
 #about {
-    padding: 160px 0 90px;
-}
-
-.wrapper {
-    position: relative;
+    padding: clamp(5rem, 3.9437rem + 4.2254vw, 8rem) 0px;
 }
 
 .about-img {
+    width: 100%;
     max-width: 730px;
 }
 
 .text-block {
-    display: inline-block;
     max-width: 550px;
+    padding-top: 5rem;
+    padding-left: 5rem;
     background-color: #fff;
-    padding: 100px 0 0 100px;
     position: absolute;
-    top: 165px;
-    right: -5px;
-}
-
-.text-block .section-title {
-    margin-bottom: 30px;
+    bottom: 0;
+    right: 0;
 }
 
 .text {
+    font-size: 17px;
+    font-weight: 500;
     color: hsl(0, 0%, 55%);
     line-height: 1.5;
 }
 
 
-/* Creations section styles */
+/* CREATION SECTION STYLES */
 #creations {
-    padding: 90px 0 180px;
+    padding-bottom: clamp(5rem, 3.9437rem + 4.2254vw, 8rem);
 }
 
 .creations-list {
     display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(240px, 256px));
     gap: 30px;
-    margin-top: 70px;
+    margin-top: 50px;
 }
 
 .creation-item {
-    max-height: 450px;
     position: relative;
     cursor: pointer;
 }
@@ -155,7 +172,8 @@ footer {
 .creation-item img {
     height: 100%;
     width: 100%;
-    transition: opacity .3s ease;
+    object-fit: cover;
+    transition: opacity .3s ease-out;
 }
 
 .creation-item:hover img {
@@ -175,18 +193,17 @@ footer {
     text-align: left;
 }
 
-.btn {
+.btn-black {
     padding: 10px 40px;
     background-color: #fff;
     border: 2px solid hsl(0, 0%, 41%);
     border-radius: 3px;
-    cursor: pointer;
     font-size: 16px;
     text-transform: uppercase;
     transition: all .2s ease;
 }
 
-.btn:hover {
+.btn-black:hover {
     color: #fff;
     background-color: #000;
 }
@@ -197,14 +214,13 @@ footer {
 }
 
 
-/* Footer styles */
+/* FOOTER SECTION STYLES */
 footer {
     background-color: #000;
 }
 
 .footer-grid {
     display: grid;
-    grid-template-columns: repeat(2, 1fr);
     gap: 20px;
 }
 
@@ -223,7 +239,7 @@ footer {
 
 .attribution {
     text-align: center;
-    font-size: 18px;
+    font-size: 1.2rem;
     color: #fff;
     margin-top: 30px;
 }

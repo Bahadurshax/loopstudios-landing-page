@@ -1,14 +1,9 @@
-const burger_btn = document.querySelector('.burger-btn');
-const mobile_menu = document.querySelector(`${burger_btn.getAttribute('href')}`);
-const btn_img = burger_btn.querySelector('img');
+const mobile_btn = document.querySelector('.menu-btn');
+const mobile_menu = document.querySelector('#mobile_menu');
 
-burger_btn.addEventListener('click', event => {
-    event.preventDefault()
-    mobile_menu.classList.toggle('open')
+mobile_btn.addEventListener('click', () => {
+    const isOpen = mobile_menu.getAttribute('aria-expanded') === 'true';
 
-    if (mobile_menu.classList.contains('open')) {
-        btn_img.src = 'images/icon-close.svg';
-    } else {
-        btn_img.src = 'images/icon-hamburger.svg';
-    }
+    const attr = isOpen ? false : true;
+    mobile_menu.setAttribute('aria-expanded', attr);
 })
