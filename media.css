@@ -61,7 +61,7 @@
         transition: width .5s ease;
     }
 
-    .navbar-collapse[aria-expanded="true"] {
+    .navbar-collapse[data-visible="true"] {
         width: 100%;
         padding: 5%;
     }

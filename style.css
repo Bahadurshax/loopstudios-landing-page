@@ -83,7 +83,7 @@ footer {
     right: 5%;
 }
 
-.navbar-collapse[aria-expanded="true"] ~ .menu-btn {
+.menu-btn[aria-expanded="true"] {
     background-image: url('images/icon-close.svg');
 }
 
